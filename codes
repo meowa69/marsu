@@ -1,0 +1,214 @@
+package dw;
+import java.util.*;
+public class oezn {
+    
+    public static void main(String[] args){
+        
+        int num=0;
+        for(int x=0;x<1;){
+            
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        num = sc.nextInt();
+        
+        if(num<0){
+            System.out.println("Negative");
+        }else if(num==0){
+            System.out.println("Zero");
+        }else if(num%2!=0){
+            System.out.println("Odd");
+        }else if(num%2==0){
+            System.out.println("Even");
+        }
+        Scanner sc1 = new Scanner(System.in);
+        System.out.print("\nDo you want to order again? (yes / no): ");
+        String yn = sc1.nextLine();
+        
+        if (yn.equalsIgnoreCase("yes")) {
+            x = 0;
+
+        } else if (yn.equalsIgnoreCase("no")) {
+            x = 1;
+            }
+        }
+    }
+}
+
+-----------------------------------------------------
+
+package dw;
+
+public class num {
+    
+    public static void main(String[] args){
+        int i;
+        i=1;
+
+        System.out.println("The natural numbers are: ");
+       do{
+        System.out.println(i);
+        i++;
+       }while(i<=10);
+       
+
+    }
+}
+
+
+----------------------------------------------
+
+package dw;
+import java.util.*;
+public class fl {
+    
+    public static void main(String[] args){
+
+        Scanner flt = new Scanner(System.in);
+        System.out.print("Enter 1st float: ");
+        float f1 = flt.nextFloat();
+        System.out.print("Enter 2nd float: ");
+        float f2 = flt.nextFloat();
+
+        if(f1==f2){
+        System.out.println("Two floats are the same.");
+        }else if(f1 != f2)
+        System.out.println("Two floats are not the same.");
+    }
+}
+
+-----------------------------------------------------
+
+package Assignment;
+
+import java.util.*;
+
+public class assignment {
+
+    public static void main(String[] args) {
+        {
+
+            for (int x = 0; x <= 1;) {
+                double weight, height, age, i, BMR;
+                double w = 13.75, h = 5.003, a = 6.755;
+
+                Scanner sc1 = new Scanner(System.in);
+                System.out.print("\nWeight in kg: ");
+                weight = sc1.nextDouble();
+                double r1 = weight * w;
+                System.out.println("The result is: " + r1);
+
+                Scanner sc2 = new Scanner(System.in);
+                System.out.print("\nHeight in cm: ");
+                height = sc2.nextDouble();
+                double r2 = height * h;
+                System.out.println("The result is: " + r2);
+
+                Scanner sc3 = new Scanner(System.in);
+                System.out.print("\nAge in years: ");
+                age = sc3.nextDouble();
+                double r3 = age * a;
+                System.out.println("The result is: " + r3);
+
+                i = +r1 + r2 - r3;
+                System.out.println("\nresult: " + i);
+
+                BMR = 66.47 + i;
+                System.out.println("\nThe BMR is: " + BMR);
+
+                if (BMR < 2500) {
+                    System.out.println(
+                            "\nYour BMR is too low. You need this calories: " + String.format("%.2f", 2500 - BMR));
+                } else if (BMR > 2500) {
+                    System.out.println("\nYour BMR is too high. You need to exercise to lost this calories."
+                            + String.format("%.2f", 2500 - BMR));
+                } else if (BMR == 2500) {
+                    System.out.println("\nYour BMR is moderate. You're normal.");
+                } else
+                    System.out.println("Invalid input.");
+                {
+
+                }
+                Scanner yn1 = new Scanner(System.in);
+                {
+                    System.out.print("\nDo you want to try again? (yes / no): ");
+                    String yn = yn1.nextLine();
+
+                    if (yn.equalsIgnoreCase("Yes")) {
+                        x = 0;
+
+                    } else if (yn.equalsIgnoreCase("No")) {
+                        System.out.print("Goodbye!");
+                        x = 1;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+-------------------------------------------------
+
+import java.util.*;
+public class waybuot {
+    static int bal = 0;
+    public static void main(String[] args){
+
+        
+        
+        Scanner sc = new Scanner(System.in);
+        System.out.print("ATM\n");
+        System.out.println("[1] withdraw");
+        System.out.println("[2] deposit");
+        System.out.println("[3] balance");
+        System.out.println("[4] Exit");
+
+        for(int i=0; i<1;){
+        System.out.print("\nEnter your choice: ");
+        int wdrw = sc.nextInt();
+        
+        
+        switch(wdrw){
+            case 1:
+                if(bal > wdrw){
+                    Scanner wdrw1 = new Scanner(System.in);
+                    System.out.println("\nEnter amount to withdraw: ");
+                    int wdn = wdrw1.nextInt();
+                    int bal1 = bal-wdn;
+                    if(bal1<100){
+                    System.out.println("Please have at least 100php inside your ATM to withdraw");
+                    }
+                    else{
+                    System.out.println("you withdraw: " + wdn);
+                    bal = bal - wdn; 
+                    i=0;
+                    }
+                }else if(bal==0)
+                {
+                        System.out.println("\nYour current balance is: " + bal);
+                        i=0;
+            
+                }
+                break;
+
+            case 2:
+                Scanner input = new Scanner(System.in);
+                System.out.println("\nEnter your amount to deposit: ");
+                int dep = input.nextInt();
+
+                bal = dep + bal;
+                System.out.println("Your current balance: " + bal);
+                break;
+
+            case 3:
+                System.out.println("\nYour balance now is: " + bal);
+                break;
+
+            case 4:
+                System.exit(0);
+        
+        }
+    }
+}
+}
